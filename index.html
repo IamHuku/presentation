@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kwadzanai Majaji | Executive Portfolio</title>
+    <style>
+        :root {
+            --navy: #0f172a;
+            --blue: #2563eb;
+            --light-bg: #f8fafc;
+            --border: #e2e8f0;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        nav {
+            background: var(--navy);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+
+        nav a:hover { opacity: 1; color: var(--blue); }
+
+        section {
+            display: none; 
+            padding: 4rem 2rem;
+            max-width: 950px;
+            margin: 0 auto;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        section.active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .profile-header {
+            text-align: center;
+            padding: 3rem 0;
+            background: white;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--blue);
+            margin-bottom: 1rem;
+        }
+
+        h1 { margin: 0; font-size: 2.5rem; color: var(--navy); }
+        .subtitle { color: var(--blue); font-weight: 600; letter-spacing: 1px; margin-bottom: 1rem; }
+
+        .card { background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 1.5rem; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        .badge { background: #dbeafe; color: #1e40af; padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 0.85rem; font-weight: 600; display: inline-block; margin: 0.3rem; }
+        
+        .exp-item { border-left: 3px solid var(--blue); padding-left: 1.5rem; margin-bottom: 3rem; }
+        .exp-date { color: var(--blue); font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem; display: block; }
+        
+        h3 { margin-top: 0; color: var(--navy); }
+        ul { padding-left: 1.2rem; }
+        li { margin-bottom: 0.6rem; }
+
+        footer { text-align: center; padding: 2rem; font-size: 0.8rem; color: var(--text-muted); }
+
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-header">
+        <img src="profile.jpg" alt="Kwadzanai Majaji" class="profile-img">
+        <h1>Kwadzanai Majaji</h1>
+        <div class="subtitle">Cybersecurity, Governance & Technology Leader</div>
+        <p>Melbourne, VIC</p>
+    </div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#" onclick="showPage('summary')">Summary</a>
+            <a href="#" onclick="showPage('expertise')">Expertise</a>
+            <a href="#" onclick="showPage('experience')">Experience</a>
+            <a href="#" onclick="showPage('certificates')">Credentials</a>
+        </div>
+    </nav>
+
+    <section id="summary" class="active">
+        <div class="card">
+            <h2 style="color: var(--blue)">Value Proposition</h2>
+            <p style="font-size: 1.2rem; line-height: 1.8;">
+                Strategic technology executive with <strong>14+ years of multi-sector leadership</strong>. I specialize in the measurable uplift of security maturity for complex enterprises.
+            </p>
+            <p>
+                My approach bridges the gap between technical complexity and board-level risk management. I focus on high-impact outcomes: improving detection coverage, reducing audit exposure, and lowering the cost of compliance by enabling secure transformation rather than bureaucracy.
+            </p>
+            <div class="grid-2" style="margin-top: 2rem;">
+                <div style="background: #f1f5f9; padding: 1.5rem; border-radius: 8px;">
+                    <strong>Executive Focus:</strong><br>
+                    IT Governance (MPhil), PCI Level 1 Compliance, Essential 8 Maturity, ISO 27001, and Strategic Vendor Management.
+                </div>
+                <div style="background: #eff6ff; padding: 1.5rem; border-radius: 8px;">
+                    <strong>Technical Focus:</strong><br>
+                    SIEM/SOC Capability Building, Cloud Security (CCSP), Vulnerability Management, and Enterprise Infrastructure.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise">
+        <h2>Strategic Expertise & Methodologies</h2>
+        
+        <div class="card">
+            <h3>Cybersecurity Governance & Compliance</h3>
+            <ul>
+                <li><strong>Maturity Frameworks:</strong> Direct experience driving <strong>Essential 8</strong> maturity and <strong>ISO 27001</strong> alignment across government and retail.</li>
+                <li><strong>Regulatory Excellence:</strong> Led <strong>PCI Level 1</strong> governance for large-scale retail/FMCG environments, ensuring zero-defect audit outcomes.</li>
+                <li><strong>Risk Mitigation:</strong> Specialized in <strong>Audit Remediation</strong>, converting audit findings into strategic security roadmaps that improve control operating effectiveness.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Operations & Defense Strategy</h3>
+            <ul>
+                <li><strong>Security Operations:</strong> Proven capability in building <strong>SOC (Security Operations Center)</strong> functions and <strong>SIEM uplift</strong> to enhance threat detection and response times.</li>
+                <li><strong>Identity & Access:</strong> Implementation of enterprise-wide <strong>MFA (Multi-Factor Authentication)</strong> and Zero-Trust principles.</li>
+                <li><strong>Vulnerability Management:</strong> Architecting end-to-end vulnerability lifecycles to reduce the enterprise attack surface.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>IT Leadership & Project Delivery</h3>
+            <ul>
+                <li><strong>Agile Leadership:</strong> <strong>Safe 6 Scrum Master</strong> certified; adept at leading cross-functional teams in high-pressure, digital transformation environments.</li>
+                <li><strong>Financial Oversight:</strong> Experienced in CAPEX/OPEX budget management, IT asset management, and high-value <strong>SLA negotiation</strong>.</li>
+                <li><strong>Project Management:</strong> Utilizing <strong>PMP and Prince2</strong> methodologies to ensure on-time, within-budget delivery of mission-critical infrastructure.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Professional Leadership Record</h2>
+        
+        <div class="exp-item">
+            <span class="exp-date">January 2025 - Present</span>
+            <h3>IT Security Operations Lead | Hume City Council</h3>
+            <ul>
+                <li>Managing enterprise Security Operations including <strong>SIEM, SOC, and Vulnerability Management</strong>.</li>
+                <li>Leading the strategic rollout of <strong>MFA</strong> and providing senior advisory for architectural design reviews.</li>
+                <li>Orchestrating IT security assessment remediations to align with municipal compliance standards.</li>
+            </ul>
+        </div>
+
+        <div class="exp-item">
+            <span class="exp-date">March 2023 - July 2024</span>
+            <h3>Senior Manager: Information Security | Retail Store & FMCG Group</h3>
+            <ul>
+                <li>Architected the Information Security strategy for a high-volume retail group, emphasizing <strong>PCI Level 1</strong> compliance.</li>
+                <li>Improved organizational security posture by implementing <strong>SOC capability building</strong> and <strong>ISO 27001</strong> alignment.</li>
+                <li>Directed risk-based remediation efforts to significantly reduce enterprise audit exposure.</li>
+            </ul>
+        </div>
+
+        <div class="exp-item">
+            <span class="exp-date">June 2017 - September 2021</span>
+            <h3>IT Manager | Nelson Mandela Children's Hospital</h3>
+            <ul>
+                <li>Strategic oversight of the ICT function for a major specialist hospital, ensuring <strong>99.9% uptime</strong> for mission-critical clinical systems.</li>
+                <li>Led the <strong>end-to-end ICT infrastructure rollout</strong> and systems integration during the facility's commissioning phase.</li>
+                <li>Managed high-level stakeholder relationships, vendor contracts, and departmental budgeting.</li>
+            </ul>
+        </div>
+
+        <div class="exp-item">
+            <span class="exp-date">2011 - 2017</span>
+            <h3>Foundational IT Management Roles</h3>
+            <p><strong>IT Manager (Governance & Security) @ Africa's Best 350 LTD:</strong> Acted as the IT Compliance and Security officer, managing a multi-site network for a major transport enterprise.</p>
+            <p><strong>National IT Manager @ South Point:</strong> Directed national IT operations and support for a leading student accommodation provider.</p>
+            <p><strong>IT Manager @ Ikhala TVET College:</strong> Headed the ICT department, managing infrastructure and staff for a large educational institution.</p>
+        </div>
+    </section>
+
+    <section id="certificates">
+        <h2>Academic & Professional Credentials</h2>
+        
+        <div class="card">
+            <h3>Executive Certifications</h3>
+            <div class="grid-2">
+                <ul>
+                    <li><strong>CISSP</strong> - Info Systems Security Professional</li>
+                    <li><strong>CISM</strong> - Information Security Manager</li>
+                    <li><strong>CGRC</strong> - Governance, Risk & Compliance</li>
+                    <li><strong>CCSP®</strong> - Cloud Security Professional</li>
+                    <li><strong>ISO 27001</strong> - Lead Implementer</li>
+                </ul>
+                <ul>
+                    <li><strong>PMP</strong> - Project Management Professional</li>
+                    <li><strong>Safe 6</strong> - Scrum Master</li>
+                    <li><strong>Prince2 Foundation</strong></li>
+                    <li><strong>ITIL</strong> - Service Management</li>
+                    <li><strong>Azure Fundamentals</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Formal Education</h3>
+            <p><strong>Master of Philosophy (MPhil) - IT Governance</strong><br>
+            Nelson Mandela University (2019 - 2024)</p>
+            
+            <p><strong>Post Graduate Diploma - Project Management</strong><br>
+            MANCOSA (2015 - 2016)</p>
+
+            <p><strong>BSc Honours - Computer Science</strong><br>
+            National University of Science and Technology (2006 - 2010)</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Kwadzanai Majaji | Confidential Professional Portfolio</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(sec => sec.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
